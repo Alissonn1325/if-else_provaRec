@@ -5,9 +5,22 @@
     //Contudo, se a nota do terceiro trimestre for menor que a do segundo trimestre, informe que o aluno que ajudou não receberá adicional na nota.
 
     //ENTRADA
+    
+    const notaS2 = Number(prompt("Quanto o Aluno Tirou no Segundo Trimestre?"))
+    const notaT3 = Number(prompt("Quanto o Aluno Tirou no Terceiro Trimestre?"))
 
 
     //PROCESSAMENTO
+
+    const notaAjuda = notaT3 * 30/100
+
+    if (notaT3 > notaS2) {
+        alert(`O Adicional na Nota do Ajudante Será: ${notaAjuda}`)
+        
+    } else {
+        alert(`O Ajudante Não Receberá Nota Pois O Aluno Tirou Uma Nota Mais Baixa. S2: "${notaS2}" T3: "${notaT3}"`)
+        
+    }
 
 
     //SAÍDA

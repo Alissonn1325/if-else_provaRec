@@ -7,10 +7,30 @@
 
     //ENTRADA
 
+    const cargoOcupado = prompt("Qual o Seu Cargo? (P) Programador | (A) Analista")
+    const horasTrabalhadas = Number(prompt("Por Quantas Horas Trabalha?"))
+    const recebePorHora = Number(prompt("Quanto Recebes Por Hora?"))
 
-    //PROCESSAMENTO
+    const aumentoP = recebePorHora * 20/100
+    const aumentoA = recebePorHora * 25/100
+    const adicionalFinalP = recebePorHora * aumentoP
+    const adicionalFinalA = recebePorHora * aumentoA
 
+    if (cargoOcupado === "P" && horasTrabalhadas <= 40) {
+        alert(`Não Haverá Adiconal.`)
+        
+    } else if (cargoOcupado === "P" && horasTrabalhadas > 40) {
+        alert(`Parabéns Você Ganho Um Adicional!`)
+        document.write(`Adicional No Seu Sálario Final: R$: ${adicionalFinalP.toFixed(2)}`)
 
-    //SAÍDA
+    }
+
+    else if (cargoOcupado === "A" && horasTrabalhadas <= 40) {
+        alert(`Não Haverá Adiconal.`)
+    }
+    else {
+        alert(`Parabéns! Você Ganhou Um Adicional! (Analista)`)
+        document.write(`Adicional No Seu Sálario Final: R$: ${adicionalFinalA.toFixed(2)}`)
+    }
 
 </script>

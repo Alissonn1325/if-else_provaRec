@@ -9,8 +9,33 @@
 
     //ENTRADA
 
+    const dinheiro = Number(prompt("Quanto de Dinheiro Você Tem Para Pagar?"))
+    const batataKg = Number(prompt("Quanto que ta o KG de Batata?"))
+    const laranjaKg = Number(prompt("Quanto que ta o KG de Laranja?"))
+    const macaKg = Number(prompt("Quanto que ta o KG de Maça?"))
+    const tomateKg = Number(prompt("Quanto que ta o KG de Tomate?"))
+
 
     //PROCESSAMENTO
+
+    const precoFinal = (batataKg * 1.3) + (laranjaKg * 1.5) + (macaKg * 1.2) + (tomateKg * 0.9)
+    const sobra = dinheiro - precoFinal
+
+    if (precoFinal > dinheiro) {
+        alert(`Você Está Devendo!`)
+        document.write(`Dinheiro: R$: ${dinheiro}, O Total Da Compra: R$: ${precoFinal} e Quanto Deves: R$: ${sobra}`)
+        
+    } else if (precoFinal < dinheiro) {
+        alert(`Você Pagou Direitinho.`)
+        document.write(`Dinheiro: R$: ${dinheiro}, O Total Da Compra: R$: ${precoFinal} e Quanto Sobrou: R$: ${sobra}`)
+        
+    }
+
+    else{
+        alert(`Gastou Tudo.`)
+        document.write(`Dinheiro: R$: ${dinheiro}, O Total Da Compra: R$: ${precoFinal}, Logo não Lhe Sobrou Nada.`)
+
+    }
 
 
     //SAÍDA
